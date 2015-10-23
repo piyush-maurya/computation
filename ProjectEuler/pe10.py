@@ -1,6 +1,5 @@
 __author__ = 'piyush'
 
-
 def prime(n):
     sum = 0
     for num in range(2,n+1):
