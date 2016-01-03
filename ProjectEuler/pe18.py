@@ -2,18 +2,21 @@ __author__ = 'piyush'
 
 x = int(input())
 n = []
-
+a = []
 for i in range(x):
     n.append(int(input()))
-
-a = [[]]
-
-for i in range(x):
     for j in range(n[i]):
-        print(n)
+        a.append([int(k) for k in input().split()])
+for i in range(x):
+    sum = 0
+    for j in range(n[i]):
+        max = 0
         for k in range(j+1):
-            a[j].append(int(input()))
-        print(a)
+            if max < a[j][k]:
+                max = a[j][k]
+        sum += max
+    print(sum)
 
 
-print(a)
+
+
